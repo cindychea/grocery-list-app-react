@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Item from './Item';
 
 const Group = () => {
+  let [m, setM] = useState(3);
+  let [p, setP] = useState(4);
+  let [d, setD] = useState(1);
+  let [b, setB] = useState(2);
+
   return (
     <React.Fragment>
-      <Item group="meat" value={3} content="Steaks"/>
-      <Item group="prod" value={4} content="Apples"/>
-      <Item group="dairy" value={1} content="Milk (1L, 2%)"/>
-      <Item group="bakery" value={2} content="Baguettes"/>
+      <ul id="shoppingList" className="shoppinglist">
+        <Item group="meat" value={m} setNewValue={setM} content="Steaks"/>
+        <Item group="prod" value={p} setNewValue={setP} content="Apples"/>
+        <Item group="dairy" value={d} setNewValue={setD} content="Milk (1L, 2%)"/>
+        <Item group="bakery" value={b} setNewValue={setB} content="Baguettes"/>
+      </ul>
     </React.Fragment>
   )
 };
