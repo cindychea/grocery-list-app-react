@@ -3,24 +3,16 @@ import React from 'react';
 const Item = ({group, value, content}) => {
   console.log(`Channel: value: ${value}`);
 
-  const handleUp = () => {
-    console.log('+1');
-  };
-
-  const handleDown = () => {
-    console.log('+1');
-  };
-
-  const handleChange = (event) => {
-    console.log(event.target.value);
-  };
+  const updateValue = (newValue) => {
+    console.log(`updating with ${newValue}`)
+  }
 
   return (
     <React.Fragment>
       <li className={ group }>
-        <button onClick={ handleDown }>-</button>
-          <span onChange={ handleChange }>{ value } { content }</span>
-        <button onClick={ handleUp }>+</button>
+        <button onClick={ () => updateValue(-1)  }>-</button>
+          <span onChange={ ({target}) => updateValue(target.value) }>{ value } { content }</span>
+        <button onClick={ () => updateValue(1) }>+</button>
       </li>
     </React.Fragment>
   )
