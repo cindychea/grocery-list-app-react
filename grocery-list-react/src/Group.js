@@ -4,10 +4,10 @@ import Item from './Item';
 const Group = () => {
   return (
     <React.Fragment>
-      <Item group="meat" content="3 Steaks"/>
-      <Item group="prod" content="4 Apples"/>
-      <Item group="dairy" content="1 Milk (1L, 2%)"/>
-      <Item group="bakery" content="2 Baguettes"/>
+      <Item group="meat" value="3" content="Steaks"/>
+      <Item group="prod" value="4" content="Apples"/>
+      <Item group="dairy" value="1" content="Milk (1L, 2%)"/>
+      <Item group="bakery" value="2" content="Baguettes"/>
     </React.Fragment>
   )
 };
