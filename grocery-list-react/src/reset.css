@@ -130,7 +130,7 @@ input[type=button] {width: auto; overflow: visible;}
 .ie7 img {-ms-interpolation-mode: bicubic;}
 
 /* prevent BG image flicker upon hover
-   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+  (commented out as usage is rare, and the filter syntax messes with some pre-processors)
 .ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
 */
 
