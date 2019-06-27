@@ -10,7 +10,7 @@ const Item = ({group, value, setNewValue, content}) => {
   return (
     <React.Fragment>
       <li className={ group }>
-        <button onClick={ () => updateValue(value-1)  }>-</button>
+        <button onClick={ () => { if (value > 0) { updateValue(value-1) } }}>-</button>
           <span>{ value } { content }</span>
         <button onClick={ () => updateValue(value+1) }>+</button>
       </li>
